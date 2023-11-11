@@ -19,7 +19,8 @@ Route::get('/', function () {
 });
 
 Route::get('/hi', [OstadController::class,'index']);
-Route::get('/hello/{name?}', [OstadController::class,'hello']);
+Route::get('/hello', [OstadController::class,'hello']);
+Route::get('/login/{email}/{password}', [OstadController::class,'login']);
 
 Route::get('/location', [WeatherController::class ,'displayWeather']);
 
